@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  .obj generated in Mineways-->
+<scene bgColor="0 0 0">
+  <sceneParameters>
+    <bgColor>0 0 0 </bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>620.435 20.1 655.118</position>
+    <viewDir>-.6 .3 .5</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.6</imagePlaneWidth>
+  </camera>
+
+  
+    <light type="area">
+    <position>619.44 25.989 655.118</position>
+    <intensity>.6 .6 .6</intensity>
+    <normal>-.6 .3 .5</normal>
+    <width>10</width>
+    <length>10.0</length>
+  </light>
+  
+  
+      <light type="area">
+    <position>611 31 662</position>
+    <intensity>2 0.4 0</intensity>
+    <normal>0 .4 1</normal>
+    <width>1</width>
+    <length>1</length>
+  </light>
+  
+        <light type="area">
+    <position>615 25 659</position>
+    <intensity>.3 0.2 0</intensity>
+    <normal>-.6 .3 .5</normal>
+    <width>2</width>
+    <length>10</length>
+  </light>
+<!-- <!--   <shader name = "test" type="a"/>
+  
+  <shape name = "t" type = "sphere">
+  <shader ref = "test" />
+  <center>611 29 662</center>
+    <radius>1</radius>
+  </shape>
+   --> -->
+
+
+  <texture name="minecraft" type="image">
+    <sourcefile>images/cavern-RGBA.png</sourcefile>
+  </texture>
+  <!-- Various Objects with different shaders -->
+  <shader name="cave" type="BlinnPhongMirrored">
+    <diffuse tex = "minecraft">.9 .8 .8</diffuse>
+	<specular>.4 .3 .2</specular>
+	<phongExp>15</phongExp>
+	<mirrorCoef>0</mirrorCoef>
+  </shader>
+<instance name="cavern" type="mesh">
+    <file>objFiles/cavern.obj</file>
+    <shader ref="cave"/>
+  </instance> 
+
+
+  <shape name="cavern0" type="instance" id="cavern">
+    <transform name="xform">
+      <translate>0 0 0</translate>
+      <scale>1 1 1</scale>
+    </transform>
+    <shader ref="cave"/>
+  </shape> 
+    <texture name="ender" type="image">
+    <sourcefile>images/Slenderman.png</sourcefile>
+  </texture>
+  <shader name="slender" type="BlinnPhong">
+    <diffuse tex = "ender">.9 .8 .8</diffuse>
+	<specular>.4 .3 .2</specular>
+	<phongExp>15</phongExp>
+	<mirrorCoef>0</mirrorCoef>
+  </shader>
+  <instance name="bunnyModel" type="mesh">
+    <file>objFiles/Slenderman.obj</file>
+    <shader ref="slender"/>
+  </instance>
+  
+
+
+  <shape name="b1" type="instance" id="bunnyModel">
+    <transform name="xform1">
+	<translate>617.2 20 656</translate>
+	<rotate axis = "Y">-125</rotate>
+    </transform>
+  </shape> 
+
+
+</scene>

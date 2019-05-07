@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  .obj generated in Mineways-->
+<scene bgColor="0 0 0">
+  <sceneParameters>
+    <bgColor>0 0 0 </bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>619.435 23.989 655.118</position>
+    <viewDir>-.5 -.20 .5</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.6</imagePlaneWidth>
+	<depthOfField>5</depthOfField>
+	<lensRadius>.1</lensRadius>
+  </camera>
+
+  
+    <light type="area">
+    <position>619.44 25.989 655.118</position>
+    <intensity>1 1 1</intensity>
+    <normal>-.5 -.20 .5</normal>
+    <width>10</width>
+    <length>10.0</length>
+  </light>
+  
+  
+      <light type="area">
+    <position>608 30 661</position>
+    <intensity>1 1 1</intensity>
+    <normal>0 -1 0</normal>
+    <width>10</width>
+    <length>10.0</length>
+  </light>
+  
+
+
+  <texture name="minecraft" type="image">
+    <sourcefile>images/cavern-RGBA.png</sourcefile>
+  </texture>
+  <!-- Various Objects with different shaders -->
+  <shader name="cave" type="BlinnPhongMirrored">
+    <diffuse tex = "minecraft">1 1 1</diffuse>
+	<specular>1 1 1</specular>
+	<phongExp>20</phongExp>
+	<mirrorCoef>0</mirrorCoef>
+  </shader>
+  <instance name="cavern" type="mesh">
+    <file>objFiles/cavern.obj</file>
+    <shader ref="cave"/>
+  </instance> 
+
+
+  <shape name="cavern0" type="instance" id="cavern">
+    <transform name="xform">
+      <translate>0 0 0</translate>
+      <scale>1 1 1</scale>
+    </transform>
+    <shader ref="cave"/>
+  </shape> 
+
+
+
+</scene>

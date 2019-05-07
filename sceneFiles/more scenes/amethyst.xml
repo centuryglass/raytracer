@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  Author: Anthony Brown -->
+<scene>
+  <camera name="main" type="perspective">
+    <position>0 .5 5.4</position>
+    <viewDir>0 .4 -1</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>.6</imagePlaneWidth>
+  </camera>
+  <light type="point">
+    <position>0 1 0</position>
+    <intensity>.9 .7 .7</intensity>
+  </light>
+  <light type="point">
+    <position>1 2 1</position>
+    <intensity>.9 .7 .7</intensity>
+  </light>
+
+ <light type="point">
+    <position>-1 2 1</position>
+    <intensity>.6 .6 .6</intensity>
+  </light>
+  
+  <light type="point">
+    <position>1 2 -1</position>
+    <intensity>.6 .6 .6</intensity>
+  </light>
+   <light type="point">
+    <position>0 3 -3.5</position>
+    <intensity>1 1 1</intensity>
+  </light> 
+     <light type="point">
+    <position>0 3 6</position>
+    <intensity>1 1 1</intensity>
+  </light> 
+  
+  
+  <light type="point">
+    <position>-1 2 -1</position>
+    <intensity>.6 .6 .6</intensity>
+  </light>
+
+  <shader name="amethyst" type="BlinnPhongMirrored">
+    <diffuse>.4 0 .6</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>16.0</phongExp>
+	<mirrorCoef>.6</mirrorCoef>
+  </shader>
+  
+  <shader name="lightAmethyst" type="BlinnPhongMirrored">
+    <diffuse>1 .6 1</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>16.0</phongExp>
+	<mirrorCoef>.6</mirrorCoef>
+  </shader>
+  
+   
+
+  <shader name="wall" type="Lambertian">
+    <diffuse>1 .6 .1</diffuse>
+  </shader>
+
+  <!-- Simple Mirror Shader -->
+  <shader name="mirrorMat" type="Mirror"/>
+
+  <!-- Walls -->
+  <shape name="w1" type="box">
+    <shader ref="wall" />
+    <minPt>-7.5 -1 -50.0</minPt>
+    <maxPt>-7 50 50.0</maxPt>
+  </shape>
+   <shape name="w2" type="box">
+    <shader ref="wall" />
+     <minPt>7 -1 -50.0</minPt>
+    <maxPt>7.5 50 50.0</maxPt>
+  </shape>
+   <shape name="w3" type="box">
+    <shader ref="mirrorMat" />
+     <minPt>-50 -1 6.5</minPt>
+    <maxPt>50 50 7.5</maxPt>
+  </shape>
+   <shape name="w4" type="box">
+    <shader ref="mirrorMat" />
+     <minPt>-50 -1 -50.-5.5</minPt>
+    <maxPt>50 50 -4</maxPt>
+		 </shape>
+
+<!--Ruby-->
+  <shape name="r1" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 0 0</v0>
+	<v1>-1 2 0</v1>
+	<v2> -.5 2.5 .5</v2>
+	  </shape>
+	    <shape name="r2" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 0 0</v0>
+	<v1>1 2 0</v1>
+	<v2>.5 2.5 .5</v2>
+	  </shape>
+	  
+	    <shape name="r3" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 0 0</v0>
+	<v1>0 2 .5</v1>
+	<v2>.5 2.5 .5</v2>
+	  </shape>
+	    <shape name="r4" type="triangle">
+    <shader ref="lightAmethyst"/>
+   <v0>0 0 0</v0>
+	<v1>0 2 .5</v1>
+	<v2>-.5 2.5 .5</v2>
+	  </shape>
+	    <shape name="r5" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 2 .5</v0>
+	<v1>.5 2.5 .5</v1>
+	<v2>.5 2.5 .5</v2>
+	  </shape>
+	    <shape name="r6" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>-1 2 0</v0>
+	<v1>-1 4 0</v1>
+	<v2>-.5 2.5 .5</v2>
+	  </shape>
+	    <shape name="r7" type="triangle">
+    <shader ref="lightAmethyst"/>
+  <v0>1 2 0</v0>
+	<v1>1 4 0</v1>
+	<v2>.5 2.5 .5</v2>
+	  </shape>
+	    <shape name="r8" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>-.5 2.5 .5</v0>
+	<v1>-1 4 0</v1>
+	<v2>-.5 3.5 .5</v2>
+	  </shape>
+	  
+	    <shape name="r9" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>.5 2.5 .5</v0>
+	<v1>1 4 0</v1>
+	<v2>.5 3.5 .5</v2>
+	  </shape>
+	    <shape name="r10" type="triangle">
+    <shader ref="lightAmethyst"/>
+     <v0>.5 2.5 .5</v0>
+	<v1>.5 3.5 .5</v1>
+		<v2>-.5 3.5 .5</v2>
+	  </shape>
+	  
+	    <shape name="r11" type="triangle">
+		
+    <shader ref="lightAmethyst"/>
+      <v0>-.5 2.5 .5</v0>
+	<v1>-.5 3.5 .5</v1>
+		<v2>.5 2.5 .5</v2>
+	  </shape>
+	    <shape name="r12" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>-.5 3.5 .5</v0>
+	<v1>.5 3.5 .5</v1>
+	<v2>0 4 .5</v2>
+	  </shape>
+ <shape name="r13" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 6 0</v0>
+	<v1>-1 4 0</v1>
+	<v2> -.5 3.5 .5</v2>
+	  </shape>
+	    <shape name="r14" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 6 0</v0>
+	<v1>1 4 0</v1>
+	<v2>.5 3.5 .5</v2>
+	  </shape>
+	  
+	    <shape name="r15" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 6 0</v0>
+	<v1>0 4 .5</v1>
+	<v2>.5 3.5 .5</v2>
+	  </shape>
+	    <shape name="r16" type="triangle">
+    <shader ref="lightAmethyst"/>
+   <v0>0 6 0</v0>
+	<v1>0 4 .5</v1>
+	<v2>-.5 3.5 .5</v2>
+	  </shape>
+	    <shape name="2r1" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 0 0</v0>
+	<v1>-1 2 0</v1>
+	<v2> -.5 2.5 -.5</v2>
+	  </shape>
+	    <shape name="2r2" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 0 0</v0>
+	<v1>1 2 0</v1>
+	<v2>.5 2.5 -.5</v2>
+	  </shape>
+	  
+	    <shape name="2r3" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 0 0</v0>
+	<v1>0 2 -.5</v1>
+	<v2>.5 2.5 -.5</v2>
+	  </shape>
+	    <shape name="2r4" type="triangle">
+    <shader ref="lightAmethyst"/>
+   <v0>0 0 0</v0>
+	<v1>0 2 -.5</v1>
+	<v2>-.5 2.5 -.5</v2>
+	  </shape>
+	    <shape name="2r5" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 2 -.5</v0>
+	<v1>.5 2.5 -.5</v1>
+	<v2>.5 2.5 -.5</v2>
+	  </shape>
+	    <shape name="2r6" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>-1 2 0</v0>
+	<v1>-1 4 0</v1>
+	<v2>-.5 2.5 -.5</v2>
+	  </shape>
+	    <shape name="2r7" type="triangle">
+    <shader ref="lightAmethyst"/>
+  <v0>1 2 0</v0>
+	<v1>1 4 0</v1>
+	<v2>.5 2.5 -.5</v2>
+	  </shape>
+	    <shape name="2r8" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>-.5 2.5 -.5</v0>
+	<v1>-1 4 0</v1>
+	<v2>-.5 3.5 -.5</v2>
+	  </shape>
+	  
+	    <shape name="2r9" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>.5 2.5 -.5</v0>
+	<v1>1 4 0</v1>
+	<v2>.5 3.5 -.5</v2>
+	  </shape>
+	    <shape name="2r10" type="triangle">
+    <shader ref="lightAmethyst"/>
+     <v0>.5 2.5 -.5</v0>
+	<v1>.5 3.5 -.5</v1>
+		<v2>-.5 3.5 -.5</v2>
+	  </shape>
+	  
+	    <shape name="2r11" type="triangle">
+		
+    <shader ref="lightAmethyst"/>
+      <v0>-.5 2.5 -.5</v0>
+	<v1>-.5 3.5 -.5</v1>
+		<v2>.5 2.5 -.5</v2>
+	  </shape>
+	    <shape name="2r12" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>-.5 3.5 -.5</v0>
+	<v1>.5 3.5 -.5</v1>
+	<v2>0 4 -.5</v2>
+	  </shape>
+ <shape name="2r13" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 6 0</v0>
+	<v1>-1 4 0</v1>
+	<v2> -.5 3.5 -.5</v2>
+	  </shape>
+	    <shape name="2r14" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 6 0</v0>
+	<v1>1 4 0</v1>
+	<v2>.5 3.5 -.5</v2>
+	  </shape>
+	  
+	    <shape name="2r15" type="triangle">
+    <shader ref="lightAmethyst"/>
+    <v0>0 6 0</v0>
+	<v1>0 4 -.5</v1>
+	<v2>.5 3.5 -.5</v2>
+	  </shape>
+	    <shape name="2r16" type="triangle">
+    <shader ref="lightAmethyst"/>
+   <v0>0 6 0</v0>
+	<v1>0 4 -.5</v1>
+	<v2>-.5 3.5 -.5</v2>
+	</shape>
+  <!-- Emerald-->
+  <shape name="e1" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 0 -3</v0>
+	<v1>-2 0 0</v1>
+	<v2>0 .5 0</v2>
+	  </shape>
+	 <shape name="e2" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 0 3</v0>
+	<v1>2 0 0</v1>
+	<v2>0 .5 0</v2>
+	  </shape>
+		 <shape name="e3" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 0 3</v0>
+	<v1>-2 0 0</v1>
+	<v2>0 .5 0</v2>
+	  </shape>
+	  
+	    <shape name="e4" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 0 -3</v0>
+	<v1>2 0 0</v1>
+	<v2>0 .5 0</v2>
+	  </shape>
+	  
+	   <shape name="e5" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 5 -30</v0>
+	<v1>-20 5 0</v1>
+	<v2>0 -.5 0</v2>
+	  </shape>
+	 <shape name="e6" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 5 30</v0>
+	<v1>20 5 0</v1>
+	<v2>0 -.5 0</v2>
+	  </shape>
+		 <shape name="e7" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 5 30</v0>
+	<v1>-20 5 0</v1>
+	<v2>0 -.5 0</v2>
+	  </shape>
+	  
+	    <shape name="e8" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 5 -30</v0>
+	<v1>20 5 0</v1>
+	<v2>0 -.5 0</v2>
+	  </shape>
+	  
+	  <!-- ceiling -->
+	    <shape name="se1" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 15 -3</v0>
+	<v1>-2 15 0</v1>
+	<v2>0 14.5 0</v2>
+	  </shape>
+	 <shape name="se2" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 15 3</v0>
+	<v1>2 15 0</v1>
+	<v2>0 14.5 0</v2>
+	  </shape>
+		 <shape name="se3" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 15 3</v0>
+	<v1>-2 15 0</v1>
+	<v2>0 14.5 0</v2>
+	  </shape>
+	  
+	    <shape name="se4" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 15 -3</v0>
+	<v1>2 15 0</v1>
+	<v2>0 14.5 0</v2>
+	  </shape>
+	  
+	   <shape name="se5" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 15 -30</v0>
+	<v1>-20 15 0</v1>
+	<v2>0 15.5 0</v2>
+	  </shape>
+	 <shape name="se6" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 15 30</v0>
+	<v1>20 15 0</v1>
+	<v2>0 15.5 0</v2>
+	  </shape>
+		 <shape name="se7" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 15 30</v0>
+	<v1>-20 15 0</v1>
+	<v2>0 15.5 0</v2>
+	  </shape>
+	  
+	    <shape name="se8" type="triangle">
+    <shader ref="amethyst"/>
+    <v0>0 15 -30</v0>
+	<v1>20 15 0</v1>
+	<v2>0 15.5 0</v2>
+	  </shape>
+	
+
+	 
+
+
+	  
+
+
+</scene>

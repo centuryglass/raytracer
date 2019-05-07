@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  .obj generated in Mineways-->
+<scene bgColor="0 0 0">  
+<sceneParameters>
+    <bgColor>0 0 0</bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>373 13 322</position>
+    <viewDir>1 0 0</viewDir>
+    <focalLength>0.20</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  
+    <light type="area">
+    <position>369 13 321</position>
+    <intensity>1 1 1</intensity>
+    <normal>1 0 0</normal>
+    <width>2</width>
+    <length>2</length>
+  </light>
+  
+      <light type="area">
+    <position>374.2 12 321</position>
+    <intensity>1 .6 .2</intensity>
+    <normal>-0 -.5 -.5</normal>
+    <width>.5</width>
+    <length>.5</length>
+  </light>
+  
+      <light type="area">
+    <position>380 11.4 319</position>
+    <intensity>1 1 .2</intensity>
+    <normal>0 -.1 1</normal>
+    <width>2</width>
+    <length>2</length>
+  </light>
+  
+       <light type="area">
+    <position>380 12.1 319</position>
+    <intensity>1 .4 0</intensity>
+    <normal>0 -.1 1</normal>
+    <width>2</width>
+    <length>2</length>
+  </light>
+  
+      <light type="area">
+    <position>380 13 320</position>
+    <intensity>.6 0 0</intensity>
+    <normal>0 -1 0</normal>
+    <width>4</width>
+    <length>4</length>
+  </light>
+  
+  
+      <light type="area">
+    <position>377 16 322</position>
+    <intensity>1 1 1</intensity>
+    <normal>-1 -1 0</normal>
+    <width>10</width>
+    <length>10</length>
+  </light>
+  
+  
+
+
+  <texture name="minecraft" type="image">
+    <sourcefile>images/window-RGBA.png</sourcefile>
+  </texture>
+  <!-- Various Objects with different shaders -->
+  <shader name="cave" type="BlinnPhong">
+    <diffuse tex = "minecraft">1 1 1</diffuse>
+    <specular>.7 .7 .7</diffuse>
+	<phongExp>65</phongExp>
+  </shader>
+  <instance name="cavern" type="mesh">
+    <file>objFiles/window.obj</file>
+    <shader ref="cave"/>
+  </instance> 
+
+    <texture name="creeper" type="image">
+    <sourcefile>images/creeper.png</sourcefile>
+  </texture>
+  <!-- Various Objects with different shaders -->
+  <shader name="creeper" type="BlinnPhong">
+    <diffuse tex = "creeper">1 1 1</diffuse>
+    <specular>.6 .6 .6</diffuse>
+	<phongExp>172</phongExp>
+  </shader>
+  <instance name="creeper" type="mesh">
+    <file>objFiles/creeper.obj</file>
+    <shader ref="creeper"/>
+  </instance> 
+
+  <shape name="cavern0" type="instance" id="cavern">
+    <transform name="xform">
+      <translate>0 0 0</translate>
+      <scale>1 1 1</scale>
+    </transform>
+    <shader ref="cave"/>
+  </shape> 
+  
+    <shape name="creep" type="instance" id="creeper">
+    <transform name="xform">
+      <translate>375.2 12 322</translate>
+      <scale>1 1 1</scale>
+	  <rotate axis ="Y">180</rotate>
+    </transform>
+  </shape> 
+
+
+
+</scene>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scene bgColor="1 1 1">
+
+  <sceneParameters>
+    <bgColor>1 1 1</bgColor>
+  </sceneParameters>
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 2 3</position>
+    <viewDir>0.0 0 -3.0</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>.65</imagePlaneWidth>
+  </camera>
+
+  <light type="area">
+    <position>0.0 10.0 0.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+    <normal>0 -1 0</normal>
+    <width>8</width>
+    <length>8</length>
+  </light>
+
+  <!-- Ground plane -->
+  <shader name="greyMat" type="Lambertian">
+    <diffuse>0.5 0.5 0.2</diffuse>
+  </shader>
+  <shape name="ground" type="box">
+    <shader ref="greyMat" />
+    <minPt>-50.0 -0.5 -50.0</minPt>
+    <maxPt>50.0 0.0 50.0</maxPt>
+  </shape>
+
+  <!-- Spheres -->
+  <shader name="darkYellow" type="BlinnPhong">
+    <diffuse>1.0 1.0 0.4</diffuse>
+    <specular>1.0 1.0 1.0</specular>
+    <phongExp>32.0</phongExp>
+  </shader>
+    <shader name="lightAmethyst2" type="MultiReflect">
+    <diffuse>1 1 1</diffuse>
+ <mirrorCoef>1</mirrorCoef>
+	<reflectionCount>5</reflectionCount>
+  </shader>
+  
+  <shader name="coloredGlass" type="Dielectric">
+    <refractiveIndex>1.51</refractiveIndex>
+    <attenuationCoef>0.9999 0.90 0.9999</attenuationCoef>
+  </shader>
+    <shader name="portal" type="Portal">
+     <transform name="xform">
+      <translate>0 -1 3</translate>
+      <scale>2 2 2</scale>
+    </transform>
+  </shader>
+  
+  <shader name="lightAmethyst" type="Combination">
+  <shaders>
+	<shader ref="coloredGlass">.7</shader>
+	<shader ref="portal">.8</shader>
+	</shaders>
+  </shader>
+  
+  <shape name="s1" type="sphere">
+    <shader ref="lightAmethyst"/>
+    <center>0.0 2.0 0.0</center>
+    <radius>1</radius>
+  </shape>
+    <shader name="wall" type="MultiReflect">
+    <diffuse>1 .8 .4</diffuse>
+ <mirrorCoef>.9</mirrorCoef>
+	<reflectionCount>1</reflectionCount>
+  </shader>
+
+  <!-- Simple Mirror Shader -->
+  <shader name="MirrorMat" type="MultiReflect">
+    <diffuse>.4 0 .6</diffuse>
+ <mirrorCoef>0</mirrorCoef>
+	<reflectionCount>1</reflectionCount>
+  </shader>
+  
+
+  <!-- Walls -->
+  <shape name="w1" type="box">
+    <shader ref="wall" />
+    <minPt>-7.5 -1 -50.0</minPt>
+    <maxPt>-4 50 50.0</maxPt>
+  </shape>
+   <shape name="w2" type="box">
+    <shader ref="wall" />
+     <minPt>4 -1 -50.0</minPt>
+    <maxPt>7.5 50 50.0</maxPt>
+  </shape>
+   <shape name="w3" type="box">
+    <shader ref="mirrorMat" />
+     <minPt>-50 -1 6.5</minPt>
+    <maxPt>50 50 7.5</maxPt>
+  </shape>
+   <shape name="w4" type="box">
+    <shader ref="mirrorMat" />
+     <minPt>-50 -1 -50.-5.5</minPt>
+    <maxPt>50 50 -4</maxPt>
+		 </shape>
+
+</scene>
+

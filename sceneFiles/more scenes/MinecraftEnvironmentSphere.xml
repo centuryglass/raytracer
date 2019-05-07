@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>0.5 0.5 0.7</bgColor>
+    <envMapPrefix>images/minecraft</envMapPrefix>
+  </sceneParameters>
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="sphere">
+    <position>0 15 0.5</position>
+    <lookatPoint>0 2 0</lookatPoint>
+    <focalLength>-999</focalLength>
+    <imagePlaneWidth>-999</imagePlaneWidth>
+  </camera>
+
+  <!-- -->
+  <!-- Lights -->
+  <!-- -->
+  
+  <light type="point">
+    <position>0 15 0</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+
+
+  <!-- Lambertian Shaders -->
+  <shader name="redMat" type="Lambertian">
+    <diffuse>1 0 0</diffuse>
+  </shader>
+  <shader name="greenMat" type="Lambertian">
+    <diffuse>0 1 0</diffuse>
+  </shader>
+  <shader name="blueMat" type="Lambertian">
+    <diffuse>0 0 1</diffuse>
+  </shader>
+  <shader name="yellowMat" type="Lambertian">
+    <diffuse>1 1 0</diffuse>
+  </shader>
+  <shader name="cyanMat" type="Lambertian">
+    <diffuse>0 1 1</diffuse>
+  </shader>
+  <shader name="magentaMat" type="Lambertian">
+    <diffuse>1 0 1</diffuse>
+  </shader>
+
+  <shader name="mirror" type="Mirror"/>
+
+  <!-- Textures -->
+  <texture name="lampT" type="image">
+    <sourcefile>images/lamp.png</sourcefile>
+  </texture>
+
+  <shader name="lamp" type="BlinnPhongMirrored">
+    <diffuse tex="lampT">1.0 1.0 1.0</diffuse>
+	<specular>.4 .4 .4</specular>
+	<phongExp>32</phongExp>
+	<mirrorCoef>.1</mirrorCoef>
+  </shader>
+
+    <shader name="obsidian" type="BlinnPhongMirrored">
+    <diffuse>.2 .2 .2</diffuse>
+	<specular>1 1 1</specular>
+	<phongExp>25</phongExp>
+	<mirrorCoef>.2</mirrorCoef>
+  </shader>
+
+  
+  <!-- Various Objects with different shaders -->
+
+  <shape name="mirrorSphere" type="sphere">
+    <shader ref="mirror"/>
+    <center>0.0 5.0 0.0</center>
+    <radius>3.0</radius>
+  </shape>
+
+<shape name="pillar" type="box">
+<shader ref = "lamp"/>
+<minPt>-1 -1 -1</minPt>
+<maxPt>1 1 1</maxPt>
+</shape>
+
+<shape name="pillar" type="box">
+<shader ref = "obsidian"/>
+<minPt>-1 -500 -1</minPt>
+<maxPt>1 -1.01 1</maxPt>
+</shape>
+
+
+
+</scene>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  .obj generated in Mineways-->
+<scene bgColor="0 0 0">
+  <sceneParameters>
+    <bgColor>0 0 0 </bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>617 18 58</position>
+    <viewDir>.8 .3 -.4</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.7</imagePlaneWidth>
+  </camera>
+
+    <light type="area">
+    <position>616 18 57</position>
+    <intensity>.8 .7 .6</intensity>
+    <normal>.8 .3 -.4</normal>
+    <width>5</width>
+    <length>5</length>
+  </light>
+  
+
+      <light type="area">
+    <position>  627 25 51</position>
+    <intensity>.9 .9 .9</intensity>
+    <normal>1 -.1 0</normal>
+    <width>.5</width>
+    <length>.5</length>
+  </light>
+
+  <texture name="minecraft" type="image">
+    <sourcefile>images/canyon-RGBA.png</sourcefile>
+  </texture>
+  <!-- Various Objects with different shaders -->
+  <shader name="cave" type="BlinnPhongMirrored">
+    <diffuse tex = "minecraft">1 1 1</diffuse>
+	<specular>.35 .3 .3</specular>
+	<phongExp>52</phongExp>
+	<mirrorCoef>0</mirrorCoef>
+  </shader>
+  <instance name="canyon" type="mesh">
+    <file>objFiles/canyonR.obj</file>
+    <shader ref="cave"/>
+  </instance> 
+
+
+  <shape name="cavern0" type="instance" id="canyon">
+    <transform name="xform">
+      <translate>0 0 0</translate>
+      <scale>1 1 1</scale>
+    </transform>
+  </shape> 
+  
+   <texture name="tardis" type="image">
+    <sourcefile>images/tardis.png</sourcefile>
+  </texture>
+  <!-- Various Objects with different shaders -->
+  <shader name="tardis" type="BlinnPhong">
+    <diffuse tex = "tardis">1 1 1</diffuse>
+	<specular>1 .95 .95</specular>
+	<phongExp>50</phongExp>
+  </shader>
+  
+   <shader name="greyGlaze" type="BlinnPhong">
+    <diffuse >1 1 1</diffuse>
+	<specular>1 1 1</specular>
+	<phongExp>10</phongExp>
+  </shader>
+  <instance name="box" type="mesh">
+    <file>objFiles/tardis.obj</file>
+    <shader ref="tardis"/>
+  </instance> 
+  <shape name="ground" type="box">
+    <shader ref="greyGlaze" />
+    <minPt>626.9 23.9 50.9</minPt>
+    <maxPt>627.1 24.4 51.1</maxPt>
+  </shape>
+
+  <shape name="type40" type="instance" id="box">
+    <transform name="xform">
+      <translate>627 18 51</translate>
+      <scale>.2 .2 .2</scale>
+	  <rotate axis = "Y">270</rotate>
+    </transform>
+
+  </shape>
+
+</scene>

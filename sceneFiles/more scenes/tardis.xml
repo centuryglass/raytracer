@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  .obj generated in Mineways-->
+<scene bgColor="0 0 0">
+  <sceneParameters>
+    <bgColor>0 0 0 </bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>0 6 16</position>
+    <viewDir>0 0 -1</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.6</imagePlaneWidth>
+  </camera>
+
+  
+    <light type="pt">
+    <position>0 10 15</position>
+    <intensity>1 1 1</intensity>
+    <normal>0 0 -1</normal>
+    <width>10</width>
+    <length>10.0</length>
+  </light>
+  
+  
+
+
+  <texture name="tardis" type="image">
+    <sourcefile>images/tardis.png</sourcefile>
+  </texture>
+  <!-- Various Objects with different shaders -->
+  <shader name="tardis" type="BlinnPhongMirrored">
+    <diffuse tex = "tardis">1 1 1</diffuse>
+	<specular>1 1 1</specular>
+	<phongExp>440</phongExp>
+	<mirrorCoef>0</mirrorCoef>
+  </shader>
+  <instance name="box" type="mesh">
+    <file>objFiles/tardis.obj</file>
+    <shader ref="tardis"/>
+  </instance> 
+
+
+  <shape name="type40" type="instance" id="box">
+    <transform name="xform">
+      <translate>0 0 0</translate>
+      <scale>.5 .5 .5</scale>
+	  <rotate axis = "Y">180</rotate>
+    </transform>
+    <shader ref="tardis"/>
+  </shape> 
+    <shader name="ground" type="BlinnPhongMirrored">
+    <diffuse tex = "tardis">1 1 1</diffuse>
+	<specular>1 1 1</specular>
+	<phongExp>440</phongExp>
+	<mirrorCoef>1</mirrorCoef>
+	<roughness>.2</roughness>
+  </shader>
+  
+  <shape name="type40" type="box">
+    <minPt>-100 -100 -100</minPt>
+	<maxPt>-100 0 -100</maxPt>
+    <shader ref="ground"/>
+  </shape> 
+
+
+
+</scene>

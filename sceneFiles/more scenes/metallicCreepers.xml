@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Comments can be embedded as well. -->
+<scene bgColor="0.7 0.7 0.9">
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>-4 3.0 8.0</position>
+    <viewDir>0 -1.0 -3.0</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <light type="area">
+    <position>-4 7.0 15.0</position>
+    <intensity>2 2 2</intensity>
+    <normal>0.2 -1.2 -5</normal>
+    <width>9.0</width>
+    <length>9.0</length>
+  </light>
+
+
+
+
+  <!-- Various Objects with different shaders -->
+        <texture name="brick" type="image">
+    <sourcefile>images/brick.png</sourcefile>
+	<tileRate>40</tileRate>
+  </texture>
+  <shader name="greyGlaze" type="BlinnPhong">
+    <diffuse tex ="brick">0.5 0.5 0.5</diffuse>
+	<specular>1 1 1</specular>
+	<phongExp>100</phongExp>
+    <mirrorCoef>0.30</mirrorCoef>
+	<roughness>.5</roughness>
+  </shader>
+
+
+  <shape name="ground" type="box">
+    <shader ref="greyGlaze" />
+    <minPt>-24.0 -0.5 -20.0</minPt>
+    <maxPt>16.0 0.0 20.0</maxPt>
+  </shape>
+
+  <shader name="blueMat" type="Lambertian">
+    <diffuse>0 0 1</diffuse>
+  </shader>
+  <instance name="dragonModel" type="mesh">
+    <file>objFiles/creeper.obj</file>
+    <shader ref="blueMat"/>
+  </instance> 
+    <texture name="creep" type="image">
+    <sourcefile>images/creeper.png</sourcefile>
+  </texture>
+
+  <!-- Shader info from acc5.its.brooklyn.cuny.edu/~lscarlat/graphics/SurfMats.html -->
+  <shader name="gold" type="BlinnPhong">
+    <diffuse tex = "creep">0.75164 0.60648 0.22648</diffuse>
+    <specular>0.628281 0.555802 0.366065</specular>
+    <phongExp>15.2</phongExp>
+    <mirrorCoef>0.10</mirrorCoef>
+	<roughness>.10</roughness>
+  </shader>
+  <shape name="dragon0" type="instance" id="dragonModel">
+    <transform name="xform">
+      <scale>2 2 2</scale>
+	  
+      <translate>-1.8 0 0</translate>
+      <rotate axis="Y">80</rotate>
+    </transform>
+    <shader ref="gold"/>
+  </shape> 
+
+  <shader name="bronze" type="BlinnPhong">
+    <diffuse tex = "creep">0.714 0.4284 0.18144</diffuse>
+    <specular>0.393548 0.271906 0.166721</specular>
+    <phongExp>25.6</phongExp>
+	    <mirrorCoef>0.10</mirrorCoef>
+	<roughness>.10</roughness>
+  </shader>
+  <shape name="dragon1" type="instance" id="dragonModel">
+    <transform name="xform">
+      <translate>-6.0 0 3.0</translate>
+      <scale>2 2 2</scale>
+      <rotate axis="Y">65</rotate>
+    </transform>
+    <shader ref="bronze"/>
+  </shape> 
+
+  <shader name="silver" type="BlinnPhong">
+    <diffuse tex = "creep">0.50754 0.50754 0.50754</diffuse>
+    <specular>0.508273 0.508273 0.508273</specular>
+    <phongExp>35.2</phongExp>
+	    <mirrorCoef>0.30</mirrorCoef>
+	<roughness>.10</roughness>
+  </shader>
+  <shape name="dragon2" type="instance" id="dragonModel">
+    <transform name="xform">
+      <translate>-2 0 4.0</translate>
+      <scale>2 2 2</scale>
+      <rotate axis="Y">155</rotate>
+    </transform>
+    <shader ref="silver"/>
+  </shape> 
+
+
+
+</scene>

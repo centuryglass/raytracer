@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ablib.dir/Scene.cpp.o"
+  "CMakeFiles/ablib.dir/Basis.cpp.o"
+  "CMakeFiles/ablib.dir/HitStruct.cpp.o"
+  "CMakeFiles/ablib.dir/XMLContainerClass.cpp.o"
+  "CMakeFiles/ablib.dir/Matrix4x4.cpp.o"
+  "CMakeFiles/ablib.dir/AreaLight.cpp.o"
+  "CMakeFiles/ablib.dir/LightMap.cpp.o"
+  "CMakeFiles/ablib.dir/Camera.cpp.o"
+  "CMakeFiles/ablib.dir/cameras/PerspectiveCamera.cpp.o"
+  "CMakeFiles/ablib.dir/cameras/OrthographicCamera.cpp.o"
+  "CMakeFiles/ablib.dir/cameras/SphereCamera.cpp.o"
+  "CMakeFiles/ablib.dir/Shape.cpp.o"
+  "CMakeFiles/ablib.dir/BoundingBox.cpp.o"
+  "CMakeFiles/ablib.dir/shapes/Sphere.cpp.o"
+  "CMakeFiles/ablib.dir/shapes/Triangle.cpp.o"
+  "CMakeFiles/ablib.dir/shapes/Box.cpp.o"
+  "CMakeFiles/ablib.dir/shapes/InstancedObject.cpp.o"
+  "CMakeFiles/ablib.dir/shapes/Mesh.cpp.o"
+  "CMakeFiles/ablib.dir/shapes/ShapeContainer.cpp.o"
+  "CMakeFiles/ablib.dir/Shader.cpp.o"
+  "CMakeFiles/ablib.dir/shaders/NormalMapShader.cpp.o"
+  "CMakeFiles/ablib.dir/shaders/LambertianShader.cpp.o"
+  "CMakeFiles/ablib.dir/shaders/PhongShader.cpp.o"
+  "CMakeFiles/ablib.dir/shaders/BlinnPhongShader.cpp.o"
+  "CMakeFiles/ablib.dir/shaders/DielectricShader.cpp.o"
+  "CMakeFiles/ablib.dir/shaders/PortalShader.cpp.o"
+  "CMakeFiles/ablib.dir/shaders/MultiReflectionShader.cpp.o"
+  "CMakeFiles/ablib.dir/shaders/CombinationShader.cpp.o"
+  "CMakeFiles/ablib.dir/textures/ImageTexture.cpp.o"
+  "CMakeFiles/ablib.dir/textures/PerlinNoiseTexture.cpp.o"
+  "CMakeFiles/ablib.dir/textures/MarbleTexture.cpp.o"
+  "CMakeFiles/ablib.dir/textures/TextureCalculator.cpp.o"
+  "libablib.pdb"
+  "libablib.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/ablib.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>0 0 0</bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="sphere">
+    <position>-2.5 3 -3.5</position>
+    <lookatPoint>-1 2.3 4</lookatPoint>
+    <focalLength>.5</focalLength>
+    <imagePlaneWidth>1</imagePlaneWidth>
+  </camera>
+
+  <!-- -->
+  <!-- Lights -->
+  <!-- -->
+
+
+  <light type="area">
+    <position>-1 5 -1</position>
+    <intensity>1 1 1</intensity>
+	<normal>1 1 1</normal>
+	<width>5</width>
+	<length>5</length>
+  </light>
+
+
+
+
+  <!-- Textures -->
+  <texture name="diamond" type="image">
+    <sourcefile>images/diamondBlock.png</sourcefile>
+  </texture>
+  
+   <texture name="lamp" type="image">
+    <sourcefile>images/lamp.png</sourcefile>
+	<tileRate>100</tileRate>
+  </texture>
+  
+     <texture name="bookshelf" type="image">
+    <sourcefile>images/bookshelf.png</sourcefile>
+	<tileRate>100</tileRate>
+  </texture>
+  
+     <texture name="lapis" type="image">
+    <sourcefile>images/lapis.png</sourcefile>
+	<tileRate>100</tileRate>
+  </texture>
+
+  <shader name="diamond" type="MultiReflect">
+    <diffuse tex = "diamond">1 1 1</diffuse>
+	<specular>1 1 1</specular>
+	<phongExp>5</phongExp>
+	<mirrorCoef>.2</mirrorCoef>
+		<reflectionCount>5</reflectionCount>
+  </shader>
+  
+    <shader name="lapis" type="MultiReflect">
+     <diffuse tex = "lapis">1 1 1</diffuse>
+ <mirrorCoef>.3</mirrorCoef>
+	<reflectionCount>5</reflectionCount>
+  </shader>
+  
+
+   <shader name="lamp" type="BlinnPhong">
+    <diffuse tex = "lamp">1 1 1</diffuse>
+		<specular>1 1 1</specular>
+	<phongExp>2</phongExp>
+  </shader>
+  
+    <shader name="bookshelf"type="BlinnPhong">
+    <diffuse tex = "bookshelf">1 1 1</diffuse>
+		<specular>.4 .4 .4</specular>
+	<phongExp>32</phongExp>
+  </shader>
+  
+  <shape name="diamond" type="box">
+    <shader ref="diamond"/>
+    <minPt>0 0 0</minPt>
+    <maxPt>2 2 2</maxPt>
+  </shape>
+  
+    <shape name="ground" type="box">
+    <shader ref="lapis"/>
+    <minPt>-100 -100 -100</minPt>
+    <maxPt>100 0 100</maxPt>
+  </shape>
+  
+     <shape name="w1" type="box">
+    <shader ref="bookshelf"/>
+    <minPt>4 -100 -100</minPt>
+    <maxPt>100 100 100</maxPt>
+  </shape>
+  
+       <shape name="w2" type="box">
+    <shader ref="bookshelf"/>
+    <minPt>-100 -100 -100</minPt>
+    <maxPt>-6 100 100</maxPt>
+  </shape>
+  
+      <shape name="w3" type="box">
+    <shader ref="bookshelf"/>
+    <minPt>-100 -100 4</minPt>
+    <maxPt>100 100 100</maxPt>
+  </shape>
+  
+       <shape name="w4" type="box">
+    <shader ref="bookshelf"/>
+    <minPt>-100 -100 -100</minPt>
+    <maxPt>100 100 -4</maxPt>
+  </shape>
+  
+  
+      <shape name="ceiling" type="box">
+    <shader ref="lamp"/>
+    <minPt>-100 6 -100</minPt>
+    <maxPt>100 100 100</maxPt>
+  </shape>
+
+
+  
+
+  
+  
+
+
+</scene>

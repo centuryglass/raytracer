@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene bgColor=".8 .8 .8 ">
+  <sceneParameters>
+    <bgColor>.8 .8 .8</bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>0 .6 2.2</position>
+    <viewDir>0.0 0.1 -1</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <light type="area">
+    <position>0 6.0 8.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+	<normal>0 0 -1</normal>
+	<width>5</width>
+	<length>5</length>
+  </light>
+
+  <!-- Ground plane -->
+   
+  <texture name="ender" type="image">
+    <sourcefile>images/ender.png</sourcefile>
+  </texture>
+  <shader name="redBlinnPhong" type="BlinnPhong">
+    <diffuse tex = "ender">1 1 1</diffuse>
+    <specular>.4 .4 .4</specular>
+    <phongExp>128.0</phongExp>
+  </shader>
+
+
+  <instance name="bunnyModel" type="mesh">
+    <file>objFiles/ender.obj</file>
+    <shader ref="redBlinnPhong"/>
+  </instance>
+  
+    <shader name="ground" type="BlinnPhong">
+    <diffuse>0 0 0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>25</phongExp>
+	<mirrorCoef>.5</mirrorCoef>
+	<roughness>.05</roughness>
+  </shader>
+
+   <shape name="b1" type="box">
+   <shader ref="ground"/>
+   <minPt>-100 -100 -100</minPt>
+   <maxPt>100 0 100</maxPt>
+  </shape> 
+
+  <shape name="b1" type="instance" id="bunnyModel">
+    <transform name="xform1">
+	<translate>0 .6 0</translate>
+    <rotate axis="Y">80</rotate>
+    </transform>
+  </shape> 
+   <shader name="cubeGrey" type="BlinnPhongMirrored">
+    <diffuse>0.55754 0.50754 0.55754</diffuse>
+    <specular>0.508273 0.508273 0.508273</specular>
+    <phongExp>51.2</phongExp>
+  </shader>
+  <shader name="cubeWhite" type="BlinnPhongMirrored">
+    <diffuse>.9 .9 .9</diffuse>
+    <specular>0.508273 0.508273 0.508273</specular>
+    <phongExp>51.2</phongExp>
+  </shader>
+  
+    <shader name="heart" type="Lambertian">
+    <diffuse>1 .6 1</diffuse>
+  </shader>
+ 
+ 
+  <instance name="cube" type="mesh">
+    <file>objFiles/cubeEdit.obj</file>
+    <shader ref="cubeWhite"/>
+  </instance> 
+  
+   <instance name="int" type="mesh">
+    <file>objFiles/cubeInterior.obj</file>
+    <shader ref="cubeGrey"/>
+  </instance> 
+  
+     <instance name="cir" type="mesh">
+    <file>objFiles/cubecircles.obj</file>
+    <shader ref="cubeWhite"/>
+  </instance> 
+  
+       <instance name="heart" type="mesh">
+    <file>objFiles/hearts.obj</file>
+    <shader ref="heart"/>
+  </instance> 
+
+  <shape name="base" type="instance" id="cube">
+    <transform name="xform">
+      <translate>0 .35 0</translate>
+      <scale>.01 .01 .01</scale>
+	  
+	  <rotate axis="X">-25</rotate>
+	  <rotate axis="Y">45</rotate>
+    </transform>
+  </shape> 
+
+   <shape name="interior" type="instance" id="int">
+    <transform name="xform">
+      <translate>0 .35 0</translate>
+      <scale>.0101 .0101 .0101</scale>
+	  
+	  <rotate axis="X">-25</rotate>
+	  <rotate axis="Y">45</rotate>
+    </transform>
+  </shape> 
+     <shape name="circle" type="instance" id="cir">
+    <transform name="xform">
+      <translate>0 .35 0</translate>
+      <scale>.0102 .0102 .0102</scale>
+	  
+	  <rotate axis="X">-25</rotate>
+	  <rotate axis="Y">45</rotate>
+    </transform>
+  </shape> 
+     <shape name="<3" type="instance" id="heart">
+    <transform name="xform">
+      <translate>-.002 .343 0</translate>
+      <scale>.0104 .0104 .0104</scale>
+	  
+	  <rotate axis="X">-25</rotate>
+	  <rotate axis="Y">45</rotate>
+    </transform>
+  </shape> 
+
+</scene>
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Comments can be embedded as well. -->
+<scene bgColor="0.7 0.7 0.9">
+  <sceneParameters>
+    <bgColor>0 0 0</bgColor>
+  </sceneParameters>
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>.05 .7 0</position>
+    <viewDir>0 -1 .01</viewDir>
+    <focalLength>0.650</focalLength>
+    <imagePlaneWidth>0.55</imagePlaneWidth>
+  </camera>
+
+
+  
+   <light type="area">
+    <position>2 15 6</position>
+    <intensity>.6 .6 .6</intensity>
+    <normal>0 -1 .1</normal>
+    <width>4.0</width>
+    <length>4.0</length>
+  </light>
+    <texture name="marbleTex" type="image">
+    <sourcefile>images/marble.png</sourcefile>
+	<tileRate>1</tileRate>
+  </texture>
+      <texture name="diamond" type="image">
+    <sourcefile>images/diamond.png</sourcefile>
+	<tileRate>500</tileRate>
+  </texture>
+  <!-- Various Objects with different shaders -->
+ <shader name="silver" type="BlinnPhong">
+    <diffuse tex = "marbleTex">1 1 1</diffuse>
+    <specular>.4 .4 .4</specular>
+    <phongExp>51.2</phongExp>
+  </shader>
+  
+     <texture name="lapis" type="image">
+    <sourcefile>images/lapis.png</sourcefile>
+	<tileRate>1000</tileRate>
+  </texture>
+  
+    <shader name="lapis" type="BlinnPhong">
+     <diffuse tex = "lapis">.2 .2 .4</diffuse>
+	 <specular>.4 .4 .4</specular>
+    <phongExp>51.2</phongExp>
+  </shader>
+
+  <shape name="ground" type="box">
+    <shader ref="silver" />
+    <minPt>-.7 -60 -.7</minPt>
+    <maxPt>.7 -0.5 .7</maxPt>
+  </shape>
+ <shader name="gemstone" type="Dielectric">
+    <refractiveIndex>1.42</refractiveIndex>
+    <attenuationCoef>.999 .995 .97</attenuationCoef>
+  </shader>
+  <shader name = "combo" type = "Combination">
+  <shaders>
+  <shader ref= "lapis">1</shader>
+  <shader ref = "gemstone">.9</shader>
+  </shaders>
+  </shader>
+
+ 
+  <instance name="gem" type="mesh">
+    <file>objFiles/gun.obj</file>
+	
+    <shader ref="combo"/>
+  </instance> 
+  
+    <shape name="base" type="instance" id="gem">
+    <transform name="xform">
+	<translate>0 -.5 0</translate>
+	<rotate axis = "Y">180</rotate>
+    </transform>
+  </shape> 
+  
+
+
+
+
+</scene>
