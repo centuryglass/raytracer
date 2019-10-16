@@ -46,7 +46,6 @@ Box::~Box() {
     for (int i = 0; i <= 11; i++) {
         if (tri[i] != NULL) delete tri[i];
     }
-    delete [] tri;
 }
 
 bool Box::intersect(Ray& r, float tmin, float tmax, HitStruct &hit) {

@@ -95,7 +95,7 @@ public:
         return depth;
     }
 
-    int setDepth(int d) {
+    void setDepth(int d) {
         depth = d;
     }
 

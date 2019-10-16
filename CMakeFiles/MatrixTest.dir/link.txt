@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/MatrixTest.dir/MatrixTest.cpp.o  -o MatrixTest shared/cs57s1Lib/cs5721GraphicsLib/src/libsive-rtutil.a src/libablib.a -Wl,-Bstatic -lboost_program_options -lboost_filesystem -lboost_thread -lboost_system -Wl,-Bdynamic -lpthread -lpng -lz shared/cs57s1Lib/cs5721GraphicsLib/src/libsive-rtutil.a 

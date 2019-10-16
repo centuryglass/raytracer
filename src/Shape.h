@@ -27,6 +27,7 @@ protected:
     string name;
     BoundingBox bbox;
 public:
+    Vector3D getCenter(){return bbox.center();}
     /**
      * Determine whether Ray r intersects with this Shape.
      * @param r The viewing ray.
@@ -35,7 +36,6 @@ public:
      * @param hit is used to store hit information if r intersects with t.
      * @return true if r intersects with this Shape
      */
-    Vector3D getCenter(){return bbox.center();}
     virtual bool intersect(Ray &r, float tmin, float tmax, HitStruct &hit) = 0;
         /**
      * Sets s and t to the texture coordinates at a certain point on the 
@@ -53,7 +53,7 @@ public:
     double getThickness(HitStruct &hit, Ray &r);
 
     Shader * getShader() {
-        if (shader == NULL)return shader;
+        return shader;
     }
 
     string getName() 

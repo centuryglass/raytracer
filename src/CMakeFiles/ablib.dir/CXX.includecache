@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/anthony/Workspace/C++/RayTracer/src/AreaLight.cpp
-AreaLight.h
-/home/anthony/Workspace/C++/RayTracer/src/AreaLight.h
-
 /home/anthony/Workspace/C++/RayTracer/src/AreaLight.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/Vector3D.h
@@ -26,17 +22,9 @@ set
 cmath
 -
 
-/home/anthony/Workspace/C++/RayTracer/src/Basis.cpp
-Basis.h
-/home/anthony/Workspace/C++/RayTracer/src/Basis.h
-
 /home/anthony/Workspace/C++/RayTracer/src/Basis.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/Vector3D.h
-
-/home/anthony/Workspace/C++/RayTracer/src/BoundingBox.cpp
-BoundingBox.h
-/home/anthony/Workspace/C++/RayTracer/src/BoundingBox.h
 
 /home/anthony/Workspace/C++/RayTracer/src/BoundingBox.h
 limits
@@ -45,14 +33,6 @@ Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/Vector3D.h
 Ray.h
 /home/anthony/Workspace/C++/RayTracer/src/Ray.h
-
-/home/anthony/Workspace/C++/RayTracer/src/Camera.cpp
-Camera.h
-/home/anthony/Workspace/C++/RayTracer/src/Camera.h
-shapes/Triangle.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Triangle.h
-shapes/ShapeContainer.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/ShapeContainer.h
 
 /home/anthony/Workspace/C++/RayTracer/src/Camera.h
 Vector3D.h
@@ -68,41 +48,9 @@ string
 set
 -
 
-/home/anthony/Workspace/C++/RayTracer/src/HitStruct.cpp
-HitStruct.h
-/home/anthony/Workspace/C++/RayTracer/src/HitStruct.h
-
-/home/anthony/Workspace/C++/RayTracer/src/HitStruct.h
-Vector3D.h
-/home/anthony/Workspace/C++/RayTracer/src/Vector3D.h
-Shape.h
-/home/anthony/Workspace/C++/RayTracer/src/Shape.h
-Scene.h
-/home/anthony/Workspace/C++/RayTracer/src/Scene.h
-Shader.h
-/home/anthony/Workspace/C++/RayTracer/src/Shader.h
-Ray.h
-/home/anthony/Workspace/C++/RayTracer/src/Ray.h
-iostream
--
-
 /home/anthony/Workspace/C++/RayTracer/src/Light.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/Vector3D.h
-
-/home/anthony/Workspace/C++/RayTracer/src/LightMap.cpp
-LightMap.h
-/home/anthony/Workspace/C++/RayTracer/src/LightMap.h
-Light.h
-/home/anthony/Workspace/C++/RayTracer/src/Light.h
-AreaLight.h
-/home/anthony/Workspace/C++/RayTracer/src/AreaLight.h
-Camera.h
-/home/anthony/Workspace/C++/RayTracer/src/Camera.h
-cameras/SphereCamera.h
-/home/anthony/Workspace/C++/RayTracer/src/cameras/SphereCamera.h
-Ray.h
-/home/anthony/Workspace/C++/RayTracer/src/Ray.h
 
 /home/anthony/Workspace/C++/RayTracer/src/LightMap.h
 nanoflann.hpp
@@ -124,10 +72,6 @@ Random.h
 Scene.h
 /home/anthony/Workspace/C++/RayTracer/src/Scene.h
 
-/home/anthony/Workspace/C++/RayTracer/src/Matrix4x4.cpp
-Matrix4x4.h
-/home/anthony/Workspace/C++/RayTracer/src/Matrix4x4.h
-
 /home/anthony/Workspace/C++/RayTracer/src/Matrix4x4.h
 cassert
 -
@@ -137,24 +81,6 @@ cmath
 -
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/Vector3D.h
-
-/home/anthony/Workspace/C++/RayTracer/src/Ray.h
-Vector3D.h
-/home/anthony/Workspace/C++/RayTracer/src/Vector3D.h
-Random.h
-/home/anthony/Workspace/C++/RayTracer/src/Random.h
-set
--
-cmath
--
-
-/home/anthony/Workspace/C++/RayTracer/src/Scene.cpp
-Scene.h
-/home/anthony/Workspace/C++/RayTracer/src/Scene.h
-Ray.h
-/home/anthony/Workspace/C++/RayTracer/src/Ray.h
-shapes/ShapeContainer.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/ShapeContainer.h
 
 /home/anthony/Workspace/C++/RayTracer/src/Scene.h
 Vector3D.h
@@ -176,10 +102,6 @@ set
 iostream
 -
 
-/home/anthony/Workspace/C++/RayTracer/src/Shader.cpp
-Shader.h
-/home/anthony/Workspace/C++/RayTracer/src/Shader.h
-
 /home/anthony/Workspace/C++/RayTracer/src/Shader.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/Vector3D.h
@@ -189,10 +111,6 @@ HitStruct.h
 /home/anthony/Workspace/C++/RayTracer/src/HitStruct.h
 string
 -
-
-/home/anthony/Workspace/C++/RayTracer/src/Shape.cpp
-Shape.h
-/home/anthony/Workspace/C++/RayTracer/src/Shape.h
 
 /home/anthony/Workspace/C++/RayTracer/src/Shape.h
 string
@@ -324,32 +242,14 @@ Shape.h
 Shader.h
 /home/anthony/Workspace/C++/RayTracer/src/Shader.h
 
-/home/anthony/Workspace/C++/RayTracer/src/cameras/OrthographicCamera.cpp
-OrthographicCamera.h
-/home/anthony/Workspace/C++/RayTracer/src/cameras/OrthographicCamera.h
-
 /home/anthony/Workspace/C++/RayTracer/src/cameras/OrthographicCamera.h
 Camera.h
 /home/anthony/Workspace/C++/RayTracer/src/cameras/Camera.h
-
-/home/anthony/Workspace/C++/RayTracer/src/cameras/PerspectiveCamera.cpp
-PerspectiveCamera.h
-/home/anthony/Workspace/C++/RayTracer/src/cameras/PerspectiveCamera.h
-Random.h
-/home/anthony/Workspace/C++/RayTracer/src/cameras/Random.h
-cmath
--
 
 /home/anthony/Workspace/C++/RayTracer/src/cameras/PerspectiveCamera.h
 Camera.h
 /home/anthony/Workspace/C++/RayTracer/src/cameras/Camera.h
 set
--
-
-/home/anthony/Workspace/C++/RayTracer/src/cameras/SphereCamera.cpp
-SphereCamera.h
-/home/anthony/Workspace/C++/RayTracer/src/cameras/SphereCamera.h
-cmath
 -
 
 /home/anthony/Workspace/C++/RayTracer/src/cameras/SphereCamera.h
@@ -372,18 +272,6 @@ cmath
 limits
 -
 
-/home/anthony/Workspace/C++/RayTracer/src/shaders/BlinnPhongShader.cpp
-BlinnPhongShader.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/BlinnPhongShader.h
-AreaLight.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/AreaLight.h
-cmath
--
-iostream
--
-set
--
-
 /home/anthony/Workspace/C++/RayTracer/src/shaders/BlinnPhongShader.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/Vector3D.h
@@ -398,12 +286,6 @@ TextureMap.h
 Random.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/Random.h
 
-/home/anthony/Workspace/C++/RayTracer/src/shaders/CombinationShader.cpp
-CombinationShader.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/CombinationShader.h
-vector
--
-
 /home/anthony/Workspace/C++/RayTracer/src/shaders/CombinationShader.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/Vector3D.h
@@ -414,18 +296,6 @@ HitStruct.h
 TextureMap.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/TextureMap.h
 iostream
--
-
-/home/anthony/Workspace/C++/RayTracer/src/shaders/DielectricShader.cpp
-DielectricShader.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/DielectricShader.h
-AreaLight.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/AreaLight.h
-cmath
--
-iostream
--
-set
 -
 
 /home/anthony/Workspace/C++/RayTracer/src/shaders/DielectricShader.h
@@ -454,18 +324,6 @@ TextureMap.h
 iostream
 -
 
-/home/anthony/Workspace/C++/RayTracer/src/shaders/LambertianShader.cpp
-LambertianShader.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/LambertianShader.h
-Ray.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/Ray.h
-TextureMap.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/TextureMap.h
-AreaLight.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/AreaLight.h
-set
--
-
 /home/anthony/Workspace/C++/RayTracer/src/shaders/LambertianShader.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/Vector3D.h
@@ -475,18 +333,6 @@ HitStruct.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/HitStruct.h
 TextureMap.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/TextureMap.h
-
-/home/anthony/Workspace/C++/RayTracer/src/shaders/MultiReflectionShader.cpp
-MultiReflectionShader.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/MultiReflectionShader.h
-Ray.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/Ray.h
-TextureMap.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/TextureMap.h
-AreaLight.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/AreaLight.h
-set
--
 
 /home/anthony/Workspace/C++/RayTracer/src/shaders/MultiReflectionShader.h
 Vector3D.h
@@ -498,10 +344,6 @@ HitStruct.h
 TextureMap.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/TextureMap.h
 
-/home/anthony/Workspace/C++/RayTracer/src/shaders/NormalMapShader.cpp
-NormalMapShader.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/NormalMapShader.h
-
 /home/anthony/Workspace/C++/RayTracer/src/shaders/NormalMapShader.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/Vector3D.h
@@ -509,20 +351,6 @@ Scene.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/Scene.h
 HitStruct.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/HitStruct.h
-
-/home/anthony/Workspace/C++/RayTracer/src/shaders/PhongShader.cpp
-PhongShader.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/PhongShader.h
-AreaLight.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/AreaLight.h
-Ray.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/Ray.h
-cmath
--
-iostream
--
-set
--
 
 /home/anthony/Workspace/C++/RayTracer/src/shaders/PhongShader.h
 Vector3D.h
@@ -533,16 +361,6 @@ HitStruct.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/HitStruct.h
 TextureMap.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/TextureMap.h
-
-/home/anthony/Workspace/C++/RayTracer/src/shaders/PortalShader.cpp
-PortalShader.h
-/home/anthony/Workspace/C++/RayTracer/src/shaders/PortalShader.h
-cmath
--
-iostream
--
-set
--
 
 /home/anthony/Workspace/C++/RayTracer/src/shaders/PortalShader.h
 Vector3D.h
@@ -556,12 +374,6 @@ Ray.h
 Matrix4x4.h
 /home/anthony/Workspace/C++/RayTracer/src/shaders/Matrix4x4.h
 
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Box.cpp
-Box.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Box.h
-iostream
--
-
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Box.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Vector3D.h
@@ -571,12 +383,6 @@ HitStruct.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/HitStruct.h
 Shape.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Shape.h
-
-/home/anthony/Workspace/C++/RayTracer/src/shapes/InstancedObject.cpp
-InstancedObject.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/InstancedObject.h
-iostream
--
 
 /home/anthony/Workspace/C++/RayTracer/src/shapes/InstancedObject.h
 Vector3D.h
@@ -589,18 +395,6 @@ Shape.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Shape.h
 Matrix4x4.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Matrix4x4.h
-
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Mesh.cpp
-Mesh.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Mesh.h
-cmath
--
-cstdlib
--
-iostream
--
-algorithm
--
 
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Mesh.h
 set
@@ -616,38 +410,6 @@ HitStruct.h
 Shape.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Shape.h
 
-/home/anthony/Workspace/C++/RayTracer/src/shapes/ShapeContainer.cpp
-ShapeContainer.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/ShapeContainer.h
-cmath
--
-cstdlib
--
-algorithm
--
-
-/home/anthony/Workspace/C++/RayTracer/src/shapes/ShapeContainer.h
-set
--
-vector
--
-Vector3D.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Vector3D.h
-HitStruct.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/HitStruct.h
-Shape.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Shape.h
-BoundingBox.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/BoundingBox.h
-
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Sphere.cpp
-Sphere.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Sphere.h
-cmath
--
-iostream
--
-
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Sphere.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Vector3D.h
@@ -657,16 +419,6 @@ HitStruct.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/HitStruct.h
 Shape.h
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Shape.h
-
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Triangle.cpp
-Triangle.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Triangle.h
-iostream
--
-Basis.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Basis.h
-Matrix4x4.h
-/home/anthony/Workspace/C++/RayTracer/src/shapes/Matrix4x4.h
 
 /home/anthony/Workspace/C++/RayTracer/src/shapes/Triangle.h
 Vector3D.h
@@ -702,16 +454,6 @@ png++/png.hpp
 string
 -
 
-/home/anthony/Workspace/C++/RayTracer/src/textures/MarbleTexture.cpp
-MarbleTexture.h
-/home/anthony/Workspace/C++/RayTracer/src/textures/MarbleTexture.h
-iostream
--
-cmath
--
-Random.h
-/home/anthony/Workspace/C++/RayTracer/src/textures/Random.h
-
 /home/anthony/Workspace/C++/RayTracer/src/textures/MarbleTexture.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/textures/Vector3D.h
@@ -722,10 +464,6 @@ HitStruct.h
 TextureCalculator.h
 /home/anthony/Workspace/C++/RayTracer/src/textures/TextureCalculator.h
 
-/home/anthony/Workspace/C++/RayTracer/src/textures/PerlinNoiseTexture.cpp
-PerlinNoiseTexture.h
-/home/anthony/Workspace/C++/RayTracer/src/textures/PerlinNoiseTexture.h
-
 /home/anthony/Workspace/C++/RayTracer/src/textures/PerlinNoiseTexture.h
 Vector3D.h
 /home/anthony/Workspace/C++/RayTracer/src/textures/Vector3D.h
@@ -735,16 +473,6 @@ HitStruct.h
 /home/anthony/Workspace/C++/RayTracer/src/textures/HitStruct.h
 TextureCalculator.h
 /home/anthony/Workspace/C++/RayTracer/src/textures/TextureCalculator.h
-
-/home/anthony/Workspace/C++/RayTracer/src/textures/TextureCalculator.cpp
-TextureCalculator.h
-/home/anthony/Workspace/C++/RayTracer/src/textures/TextureCalculator.h
-cmath
--
-iostream
--
-Random.h
-/home/anthony/Workspace/C++/RayTracer/src/textures/Random.h
 
 /home/anthony/Workspace/C++/RayTracer/src/textures/TextureCalculator.h
 Vector3D.h
@@ -866,6 +594,8 @@ stdexcept
 cerrno
 -
 cstdlib
+-
+cstring
 -
 string
 -
@@ -1106,22 +836,6 @@ cassert
 io_base.hpp
 shared/cs57s1Lib/cs5721GraphicsLib/src/png++/io_base.hpp
 
-src/AreaLight.h
-Vector3D.h
-src/Vector3D.h
-Light.h
-src/Light.h
-Basis.h
-src/Basis.h
-Random.h
-src/Random.h
-shapes/Triangle.h
-src/shapes/Triangle.h
-set
--
-cmath
--
-
 src/Basis.h
 Vector3D.h
 src/Vector3D.h
@@ -1277,14 +991,4 @@ cmath
 -
 limits
 -
-
-src/shapes/Triangle.h
-Vector3D.h
-src/shapes/Vector3D.h
-Ray.h
-src/shapes/Ray.h
-HitStruct.h
-src/shapes/HitStruct.h
-Shape.h
-src/shapes/Shape.h
 

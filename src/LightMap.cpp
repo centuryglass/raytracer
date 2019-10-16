@@ -160,7 +160,7 @@ void LightMap::populateLightMap(Scene* scene) {
 }
 
 Vector3D LightMap::getClosest(Vector3D target, double max) {
-    vector <pair<unsigned int, double> > results;
+    vector <pair<long unsigned int, double> > results;
     nanoflann::SearchParams params;
     double sum = 0;
     Vector3D photon;
@@ -168,7 +168,7 @@ Vector3D LightMap::getClosest(Vector3D target, double max) {
         double cMax = .01;
         causticsTree->radiusSearch(&target[0], cMax, results, params);
         if (results.size() > 5) {//one photon isn't enough for a good render
-            for (vector<pair<unsigned int, double> >::iterator it = results.begin();
+            for (vector<pair<long unsigned int, double> >::iterator it = results.begin();
                     it != results.end(); it++) {
                 //if ((*it).second == 0) return photonMap.photons[(*it).first].second;
                 double strength = pow((cMax - (*it).second) / cMax, 3);
@@ -188,7 +188,7 @@ Vector3D LightMap::getClosest(Vector3D target, double max) {
     if (results.size() > 0) {//one photon isn't enough for a good render
         sum = 0;
         //Average all visible photons
-        for (vector<pair<unsigned int, double> >::iterator it = results.begin();
+        for (vector<pair<long unsigned int, double> >::iterator it = results.begin();
                 it != results.end(); it++) {
             double strength = pow((max - (*it).second) / max, 5);
             sum += 1;

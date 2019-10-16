@@ -1,0 +1,6 @@
+./images/*
+./Outdated
+./rendered
+*.o
+CMakeFiles
+CMakeCache.txt
